@@ -2,6 +2,10 @@
 
 ADM-ZIP is a pure JavaScript implementation for zip data compression for [NodeJS](http://nodejs.org/). 
 
+# Forked Repo
+
+This fork implement some of the pull requests ignored in the original repo. Most notably it solved some issues with zipping binary files.
+
 # Installation
 
 With [npm](http://npmjs.org) do:
