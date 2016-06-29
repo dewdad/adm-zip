@@ -47,7 +47,7 @@ module.exports = function (/*Buffer*/input) {
         }
 
         var compressedData = getCompressedDataFromZip();
-       
+
         if (compressedData.length == 0) {
             if (async && callback) callback(compressedData, Utils.Errors.NO_DATA);//si added error.
             return compressedData;
@@ -230,7 +230,7 @@ module.exports = function (/*Buffer*/input) {
             uncompressedData = Utils.toBuffer(value);
             if (!_isDirectory && uncompressedData.length) {
                 _entryHeader.size = uncompressedData.length;
-                _entryHeader.method = Utils.Constants.DEFLATED;
+                _entryHeader.method = Utils.Constants.STORED;
                 _entryHeader.crc = Utils.crc32(value);
             } else { // folders and blank files should be stored
                 _entryHeader.method = Utils.Constants.STORED;

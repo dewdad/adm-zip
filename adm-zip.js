@@ -235,8 +235,8 @@ module.exports = function(/*String*/input) {
             }else{
                 zipPath="";
             }
-			localPath = localPath.split("\\").join("/"); //windows fix
             localPath = pth.normalize(localPath);
+      			localPath = localPath.split("\\").join("/"); //windows fix
             if (localPath.charAt(localPath.length - 1) != "/")
                 localPath += "/";
 
